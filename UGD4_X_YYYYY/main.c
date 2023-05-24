@@ -79,7 +79,7 @@ int main(int argc, char *argv[]) {
 						printf("[Ubah Data Barang]\n");
 						printf("\nMasukkan kode barang yang ingin diubah : "); fflush(stdin); gets(kode);
 						index=findItem(kode,kode_barang);
-						if(index!=-1){
+						if(index!=-1 && strlen(kode)!=0){
                             printf("\nNama barang  : %s",nama_barang[index]);
 							printf("\nKode barang  : %s",kode_barang[index]);
 							printf("\nHarga barang : %.2f $\n",harga_barang[index]);
@@ -97,7 +97,7 @@ int main(int argc, char *argv[]) {
 						printf("[Hapus Barang]\n");
 						printf("\nMasukkan kode barang yang ingin dihapus : "); fflush(stdin); gets(kode);
 						index=findItem(kode,kode_barang);
-						if(index!=-1){
+						if(index!=-1 && strlen(kode)!=0){
 							strcpy(nama_barang[index],"");
 							strcpy(kode_barang[index],"");
 							harga_barang[index]=0;
@@ -136,7 +136,7 @@ int main(int argc, char *argv[]) {
 						printf("[Cari Barang]\n");
 						printf("\nMasukkan kode barang yang ingin dicari : "); fflush(stdin); gets(kode);
 						index=findItem(kode,kode_barang);
-						if(index!=-1){
+						if(index!=-1 && strlen(kode)!=0){
 							printf("\nNama barang  : %s",nama_barang[index]);
 							printf("\nKode barang  : %s",kode_barang[index]);
 							printf("\nHarga barang : %.2f $",harga_barang[index]);

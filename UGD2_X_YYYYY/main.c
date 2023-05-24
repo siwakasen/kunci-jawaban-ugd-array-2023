@@ -78,7 +78,7 @@ int main(int argc, char *argv[]) {
 						printf("[Ubah Data Crypto]\n");
 						printf("\nMasukkan kode koin yang ingin diubah : "); fflush(stdin); gets(kode);
 						index=findCoin(kode,kode_koin);
-						if(index!=-1){
+						if(index!=-1 && strlen(kode)!=0){
 							do{
 								printf("\nNama koin baru : "); fflush(stdin); gets(nama);
 								if(strlen(nama)==0) printf("\n\t[!] Nama tidak boleh kosong");
@@ -99,7 +99,7 @@ int main(int argc, char *argv[]) {
 						printf("[Hapus Crypto]\n");
 						printf("\nMasukkan kode koin yang ingin dihapus : "); fflush(stdin); gets(kode);
 						index=findCoin(kode,kode_koin);
-						if(index!=-1){
+						if(index!=-1 && strlen(kode)!=0){
 							strcpy(nama_koin[index],"");
 							strcpy(kode_koin[index],"");
 							harga_koin[index]=0;
@@ -138,7 +138,7 @@ int main(int argc, char *argv[]) {
 						printf("[Cari Crypto]\n");
 						printf("\nMasukkan kode koin yang ingin dicari : "); fflush(stdin); gets(kode);
 						index=findCoin(kode,kode_koin);
-						if(index!=-1){
+						if(index!=-1 && strlen(kode)!=0){
 							printf("\nNama koin  : %s",nama_koin[index]);
 							printf("\nKode koin  : %s",kode_koin[index]);
 							printf("\nHarga koin : %.2f $",harga_koin[index]);
